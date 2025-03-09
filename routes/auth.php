@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 Route::middleware('guest')->group(function () {
     Route::get('register', [RegisteredUserController::class, 'create'])
@@ -35,6 +36,17 @@ Route::middleware('guest')->group(function () {
         ->name('password.store');
 });
 
+
+Route::get('/', function () {
+    return Inertia::render('Home', [
+        'message' => 'Welcome to Laravel with Inertia.js!'
+    ]);
+});
+Route::get('/about', function () {
+    return Inertia::render('About', [
+        'info' => 'This is the About Page created with Laravel and Inertia!'
+    ]);
+});
 Route::middleware('auth')->group(function () {
     Route::get('verify-email', EmailVerificationPromptController::class)
         ->name('verification.notice');
