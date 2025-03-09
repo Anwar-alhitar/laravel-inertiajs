@@ -1,5 +1,6 @@
 <script setup>
 import { useForm } from '@inertiajs/vue3';
+import AppLayout from "../../Layouts/AppLayout.vue";
 
 const form = useForm({
   title: '',
@@ -14,7 +15,7 @@ const submit = () => {
 </script>
 
 <template>
-  <div>
+  <AppLayout>
     <h1 class="text-2xl font-bold">Create New Post</h1>
 
     <form @submit.prevent="submit">
@@ -28,7 +29,7 @@ const submit = () => {
         <textarea v-model="form.content" id="content" class="border p-2 w-full"></textarea>
       </div>
 
-      <button type="submit" class="mt-4 bg-blue-500 text-white p-2">Save</button>
+      <button type="submit" class="mt-4 bg-blue-500 text-black p-2">Save</button>
     </form>
-  </div>
+  </AppLayout>
 </template>

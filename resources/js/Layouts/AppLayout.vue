@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-gray-100">
     <!-- Navbar -->
-    <nav class="bg-blue-600 text-white p-4">
+    <nav class="bg-blue-600 text-black p-4">
       <div class="container mx-auto flex justify-between">
         <h1 class="text-xl font-bold">My Inertia App</h1>
         <div>
@@ -11,9 +11,10 @@
       </div>
     </nav>
 
+
     <!-- Page Content -->
     <div class="container mx-auto mt-6 p-4 bg-white shadow-lg rounded">
-      <slot />
+      <slot></slot>
     </div>
   </div>
 </template>

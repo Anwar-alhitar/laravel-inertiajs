@@ -1,10 +1,12 @@
 <script setup>
 defineProps(['post']);
+import AppLayout from "../../Layouts/AppLayout.vue";
+
 </script>
 
 <template>
-  <div>
+  <AppLayout>
     <h1 class="text-2xl font-bold">{{ post.title }}</h1>
     <p>{{ post.content }}</p>
-  </div>
+  </AppLayout>
 </template>
