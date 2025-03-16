@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Vite::prefetch(concurrency: 3);
-        Schema::defaultStringLength(191);
+        Schema::defaultStringLength(191);  // for skiping field length
 
     }
 }
